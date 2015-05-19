@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+
+{%block title%}Home{%endblock%}
+
+{% block welcome %}
+	
+<div class = "container-fluid">
+	<h1>Welcome to My Chinese NGO Knowledge Base</h1>
+	<div class = "row" id = "mapRow">
+		<div class = "col-md-8" id = "china">
+		</div>
+		<div class = "col-md-4" id = "ngoList">
+		</div>
+	</div>
+	<div class = "row" id = "timeRow">
+<!-- 	   <svg id = "timeSvg" width = "1200px" height = "300px">
+	   </svg> -->
+	</div>
+	<div class = "row" id = "mainKnowledgeBaseRow">
+		<svg id = "mainKnowledgeBase">
+		</svg>
+	</div>
+</div>
+<div id="tooltip" class="hidden">
+	<p>省份：<b id = "province">name</b></p>
+	<p>NGO成立时间:  <b><span id = "time">0</span></b></p>
+	<p>NGO数目: <b><span id="value">0</span></b></p>
+</div>
+{% endblock %}
+
+{%block javascript %}
+<script src = "../static/js/index.js"></script>
+{%endblock%}

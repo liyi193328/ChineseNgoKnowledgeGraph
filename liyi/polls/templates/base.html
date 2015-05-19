@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{%block title%}NGO base{%endblock%}</title>
+
+    <core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/jquery-ui-1.11.2/jquery-ui.css" rel = "stylesheet">
+    <link href="../static/jquery-ui-1.11.2/jquery-ui.theme.min.css" rel = "stylesheet">
+    <link rel="stylesheet" href="../static/css/my.css">
+    
+    <!-- Custom styles for this template -->
+    <link href="../static/css/starter-template.css" rel="stylesheet">
+    
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="">NGO</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href ="/index/">Main</a></li>
+            <li ><a href="/search/">NGO Knowledge Base</a></li>
+            <li><a href="/about/">about</a></li>
+          </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+
+      {% block welcome %}
+
+      {% endblock %}
+
+      {% block  search %}
+
+      {% endblock %}
+
+    <!-- below is script location -->
+    <script src = "../static/js/jquery-1.11.2.min.js"></script>
+    <script src = "../static/jquery-ui-1.11.2/jquery-ui.js"></script>
+    <script src ="../static/js/bootstrap.min.js"></script>
+    <script src = "../static/js/d3.js"></script>
+    <script src = "../static/js/d3_tip.js"></script>
+    <script src = "../static/js/listgroup.js"></script>
+    <script src = "../static/js/render.js"></script>
+    {%block javascript %}
+
+    {% endblock %}
+  </body>
+</html>
+

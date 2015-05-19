@@ -1,0 +1,53 @@
+{% extends 'base.html'%}
+
+{%block title%}Search{%endblock%}
+{% block welcome %}{% endblock %}
+{%block search %}
+<div class="container-fluid" id = "Main">
+    <h2>Search For NGO or Relationship</h2>
+    <form role="form" name = "lForm" id = "lForm" >
+        <div class="row form-group">
+            <div class="col-sm-2">
+                <input type="text" class="input-lg form-control" id="nameA" placeholder="NGO A的名字">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="input-lg form-control" id="orgType" placeholder="A机构类型">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="input-lg form-control" id="field" placeholder="A工作领域">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="input-lg form-control" id="province" placeholder="A省份城市">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="input-lg form-control" id="nameB" placeholder="NGO B名字">
+            </div>
+        	<div class= "col-sm-2">
+                <input type ="button" class="btn btn-primary btn-lg btn-block" id = "Sbut" value = "搜索A或者A与B的关系">
+        	</div>
+        </div>
+    </form>
+    <div class = "container-fluid">
+        <div class = "row">
+            <h3><span id = "searchNgoNumber"></span> <span id = "ngoNumber"></span></h3>
+        </div>
+        <div class = "row">
+            <svg id = "graph">
+            </svg>
+        </div>
+        <div class = "row" id = "MapAndInfo">
+            <div class = "col-md-8" id = "Info">
+            </div>
+            <div class = "col-md-4" id = "nowNgoList">
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
+
+{%block javascript %}
+<script src = "../static/js/my.js"></script>
+<script src = "../static/js/search.js"></script>
+<script src="http://api.map.baidu.com/api?v=15&key=62a6776a6368a0c2d5e771ecf0025656" type="text/javascript"></script>
+{% endblock %}
